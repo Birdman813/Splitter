@@ -142,7 +142,10 @@ header {
 .reset-btn:hover {
     background-color: hsla(172, 61%, 77%, 1);
 }
-
+#error {
+    color: #E17457;
+    display: none;
+}
 @media (max-width: 650px) {
     main {
         flex-direction: column;

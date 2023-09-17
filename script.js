@@ -4,6 +4,8 @@ const tipButtons = Array.from(document.querySelectorAll('.btn-label button'));
 const customInput = document.querySelector('.custom');
 const tipPerPerson = document.querySelector('.tip-amount');
 const totalPerPerson = document.querySelector('.total-amount');
+const error = document.getElementById('error');
+
 
 let billValue = 0;
 let peopleValue = 0;
@@ -22,6 +24,11 @@ billInput.addEventListener('input', (event) => {
 
 peopleInput.addEventListener('input', (event) => {
     peopleValue = parseInt(event.target.value);
+    if (event.target.value == 0) {
+        error.style.display = 'block';
+    } else {
+        error.style.display = 'none';
+    }
     calculation();
 })
 
